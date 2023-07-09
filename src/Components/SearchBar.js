@@ -1,22 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
-function SearchBar() {
-    const [movieSearch, setMovieSearch] = useState("")
+function SearchBar({ setSearchValue, searchValue }) {
 
-    function handleMovieSearch(e) {
+    function handleSearch(e) {
         e.preventDefault()
-        setMovieSearch(e.target.value)
-
+        setSearchValue(e.target.value)
     }
 
     return (
         <>
-            <input 
-            type='search' 
-            placeholder="Search..." 
-            value={movieSearch} 
-            onChange={handleMovieSearch}>    
-            </input>
+            <form>
+                <input type='search' placeholder="Search..." value={searchValue} onChange={handleSearch} />
+            </form>
         </>
     )
 }
