@@ -5,6 +5,7 @@ function SearchBar({ setSearchValue, searchValue }) {
     function handleSearch(e) {
         e.preventDefault()
         setSearchValue(e.target.value)
+        
     }
 
     return (
