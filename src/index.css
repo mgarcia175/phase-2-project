@@ -1,3 +1,28 @@
 body {
-  background-image: url(https://plus.unsplash.com/premium_photo-1685656440548-d8cad874d5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80)
+  background-image: url(https://images.unsplash.com/photo-1526289034009-0240ddb68ce3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.search-bar {
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgba(70, 67, 67, 0.689);
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+#search-bar {
+  text-align: center;
+  
+}
+
+input::placeholder{
+  color:rgb(159, 159, 207);
+}
+
+.movie-border {
+  text-align: center;
+  max-width: 300px;
+  max-width: 451px;
 }

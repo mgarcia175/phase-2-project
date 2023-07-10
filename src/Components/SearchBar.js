@@ -5,13 +5,12 @@ function SearchBar({ setSearchValue, searchValue }) {
     function handleSearch(e) {
         e.preventDefault()
         setSearchValue(e.target.value)
-        
     }
 
     return (
         <>
-            <form>
-                <input type='search' placeholder="Search..." value={searchValue} onChange={handleSearch} />
+            <form id="search-bar">
+                <input type='search' placeholder="Search movie.." value={searchValue} onChange={handleSearch} className="search-bar"/>
             </form>
         </>
     )
