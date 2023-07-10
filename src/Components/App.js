@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import MovieList from "./MovieList.js"
 import NavBar from  "./NavBar.js"
 import SearchBar from "./SearchBar.js";
+import Header from "./Header.js";
 
 function App() {
   const [movies, setMovies] = useState([])
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div>
+      <Header />
       <SearchBar setSearchValue={setSearchValue} searchValue={searchValue}/>
       <NavBar />
       <MovieList movies={movies} />

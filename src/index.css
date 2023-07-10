@@ -4,6 +4,12 @@ body {
   background-size: cover;
 }
 
+#header {
+  color: rgb(118, 118, 118);
+  font-size: 20px;
+  margin-left: 200px;
+}
+
 .search-bar {
   height: 30px;
   border-radius: 10px;
