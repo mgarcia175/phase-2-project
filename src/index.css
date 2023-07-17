@@ -18,38 +18,77 @@ body {
 * {
   margin-left: 0px;
   margin-bottom: 0;
+  margin-top: 0;
   padding: 0;
 }
 
 #header {
-  color: rgb(118, 118, 118);
+  color: rgb(173, 169, 169);
   font-size: 30px;
-  margin-left: 70px;
-  margin-bottom: 20px;
+  padding-left: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: rgba(12, 10, 10, 0.552);
+  backdrop-filter: blur(3px);
+  border-left: 12px solid rgb(87, 81, 81);
+  border-top: 5px solid rgb(87, 81, 81);
+  border-bottom: 5px solid rgb(0, 0, 0);
 }
 
 .search-bar {
   height: 30px;
   border-radius: 10px;
-  background-color: rgba(66, 60, 60, 0.689);
+  background-color: rgba(49, 46, 46, 0.774);
   justify-content: center;
   color: rgb(255, 253, 253);
-  box-shadow: 0px 5px 10px rgba(99, 96, 96, 0.488);
-
+  box-shadow: 0px 5px 10px rgba(82, 79, 79, 0.488);
+  padding-left: 10px;
+  border-style:solid;
+  border-color: black;
+  backdrop-filter: blur(1px);
 }
 
 #search-bar {
   text-align: center;
   margin-top: 0px;
-
+  padding-top: 30px;
+  padding-bottom: 15px;
 }
 
 input::placeholder{
   color:rgb(159, 159, 207);
+  text-align: center;
 }
 
 .movie-border {
   text-align: center;
   max-width: 300px;
   max-width: 451px;
+  float: left;
+}
+
+ul {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(31, 30, 30);
+  border-radius: 8px;
+  list-style-type: none;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+li a:hover {
+  background-color: rgb(31, 29, 29);
+  color:rgb(159, 159, 207);
 }

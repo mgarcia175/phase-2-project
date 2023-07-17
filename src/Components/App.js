@@ -15,7 +15,8 @@ function App() {
     .then(data => {
       if(data.Search) {
         setMovies(data.Search)
-      } else return <h1>No movies to show... It's so cold..</h1>
+        console.log(data)
+      }
     })
   }, [searchValue])
 
