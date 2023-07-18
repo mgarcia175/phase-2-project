@@ -15,7 +15,6 @@ function App() {
     .then(data => {
       if(data.Search) {
         setMovies(data.Search)
-        console.log(data)
       }
     })
   }, [searchValue])
