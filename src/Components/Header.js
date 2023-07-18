@@ -4,7 +4,7 @@ function Header() {
 
     return(
         <div id="header">
-            <h1>Flix</h1>
+            <h1>Movie-verse</h1>
         </div>
     )
 }

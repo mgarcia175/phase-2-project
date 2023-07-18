@@ -21,7 +21,7 @@ body {
 
 #header {
   color: rgb(173, 169, 169);
-  font-size: 30px;
+  font-size: 25px;
   padding-left: 50px;
   padding-bottom: 20px;
   padding-top: 20px;
@@ -82,6 +82,10 @@ input::placeholder{
   height: 310px;
   width: 220px;
   flex-wrap: wrap;
+  min-height: 310px;
+  min-width: 220px;
+  max-height: 310px;
+  max-width: 220px;
 }
 
 ul {

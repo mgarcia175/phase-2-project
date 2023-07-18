@@ -3,7 +3,9 @@ import MovieList from "./MovieList.js"
 import NavBar from  "./NavBar.js"
 import SearchBar from "./SearchBar.js";
 import Header from "./Header.js";
-import WatchList from "./WatchList.js"
+import MyFlops from "./MyFlops.js";
+import MyReviews from "./MyReviews.js";
+import MyWatchList from "./MyWatchList.js";
 
 function App() {
   const [movies, setMovies] = useState([])
@@ -26,7 +28,6 @@ function App() {
       <SearchBar setSearchValue={setSearchValue} searchValue={searchValue}/>
       <NavBar />
       <MovieList movies={movies} />
-      <WatchList />
     </div>
   );
 }
