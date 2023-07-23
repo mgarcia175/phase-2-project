@@ -3,9 +3,14 @@ import MovieList from "./MovieList.js"
 import NavBar from  "./NavBar.js"
 import SearchBar from "./SearchBar.js";
 import Header from "./Header.js";
-import MyFlops from "./MyFlops.js";
 import MyReviews from "./MyReviews.js";
-import MyWatchList from "./MyWatchList.js";
+import WatchList from "./WatchList.js";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   const [movies, setMovies] = useState([])
@@ -25,9 +30,25 @@ function App() {
   return (
     <div>
       <Header />
-      <SearchBar setSearchValue={setSearchValue} searchValue={searchValue}/>
-      <NavBar />
-      <MovieList movies={movies} />
+      <Router>
+        <div>
+        <NavBar />
+          <Switch>
+              <Route exact path='/'>
+                  <SearchBar setSearchValue={setSearchValue} searchValue={searchValue}/>
+                  <MovieList movies={movies}/>
+              </Route>
+
+              <Route path='/my-reviews'>
+                  <MyReviews />
+              </Route>
+
+              <Route path='/watch-list'>
+                  <WatchList />
+              </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
