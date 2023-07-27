@@ -1,22 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
-function MovieList(props) {
+function MovieList({ movies, onAddToWatchList }) {
 
     function handleClap() {}
-    function handleWatch() {
-        
-    }
-
 
     return (
-
         <div className="card-container">
-            {props.movies.map((movie, index) => (
-            <div className="movie-style" key={index}>
-                <img src={movie.Poster} alt="Poster of movie" id="img"></img>
+            {movies.map((movie, index) => (
+            <div className="movie-style" key={movie.id || index}>
+                <img src={movie.Poster} alt={movie.Title} id="img"></img>
 
                 <button className='buttons' onClick={() => handleClap(movie)}>&#x1F44F;</button>
-                <button className='buttons' onClick={() => handleWatch(movie)}>&#x1F440;</button>
+                <button className='buttons' onClick={() => onAddToWatchList(movie)}>&#x1F440;</button>
             </div>
             ))}
         </div>

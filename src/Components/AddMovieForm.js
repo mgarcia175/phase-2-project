@@ -1,26 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-function AddMovieForm({onAddToWatchList, addedMovie }) {
-    const [title, setTitle] = useState('')
-    const [poster, setPoster] = useState('')
-
-    const handleSubmit = (e) => {
-        //prevents page reload
-        e.preventDefault()
-        //Will call function in App.js with added movie
-        if (addedMovie) {
-            console.log(addedMovie)
-            onAddToWatchList(addedMovie)
-        }
-    }
-
+function AddMovieForm({ addedMovie }) {
+ 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <div>
-
-                </div>
-            </form>
+            <div>
+                {addedMovie && (
+                    <div>
+                        <img src={addedMovie.Poster} alt={addedMovie.Title} id="img"></img>
+                    </div>
+                )}
+            </div>
         </div>
     )
 }

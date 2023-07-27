@@ -29,18 +29,17 @@ function App() {
     })
   }, [searchValue])
 
-  const handleAddToWatchList = () => {
+  const handleAddToWatchList = (movie) => {
 
-    if (addedMovie) {
-
-    setWatchList((prevWatchList) => [...prevWatchList, addedMovie])
-    }//This sets the old movie information to the same as it was before, plus the new movie
+    setWatchList((prevWatchList) => [...prevWatchList, movie])
+    //This sets the old movie information to the same as it was before, plus the new movie
   } 
 
 
   return (
     <div>
       <Header />
+      <AddMovieForm addedMovie={addedMovie} setAddedMovie={setAddedMovie}/>
       <Router>
         <div>
         <NavBar />
@@ -60,7 +59,6 @@ function App() {
           </Switch>
         </div>
       </Router>
-      <AddMovieForm addedMovie={addedMovie}/>
     </div>
   );
 }

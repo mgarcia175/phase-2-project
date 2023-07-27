@@ -1,18 +1,20 @@
 import React from "react";
 
-function WatchList() {
-
-    
-
-
-
-
-
+function WatchList({ watchList }) {
 
     return (
-        <div className="watch-list">
-            <h1>My Watch List</h1>
+    <div>
+        <h1 className="watch-list">My Watch List</h1>
+            <div className="card-container">
+                    <ul className="movie-style">
+                        {watchList.map((movie) => (
+                            <li key={movie.index}>
+                                <img src={movie.Poster}></img>
+                            </li>
+                        ))}
+                    </ul>
         </div>
+    </div>
     )
 }
 
