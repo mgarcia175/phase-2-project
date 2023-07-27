@@ -17,22 +17,25 @@ function App() {
   const [movies, setMovies] = useState([])
   const [searchValue, setSearchValue] = useState('')
   const [watchList, setWatchList] = useState([])
+  const [addedMovie, setAddedMovie] = useState(null)
 
   useEffect((e) => {
     fetch(`http://www.omdbapi.com/?s=${searchValue}&apikey=9ce935f0`)
     .then(res => res.json())
     .then(data => {
       if(data.Search) {
-        console.log(data)
         setMovies(data.Search)
       }
     })
   }, [searchValue])
 
-  const handleAddToWatchList = (movie) => {
-    //takes in movie and will be passed to MovieList to update added movies
-    setWatchList((prevWatchList) => [...prevWatchList, movie])
-  }
+  const handleAddToWatchList = () => {
+
+    if (addedMovie) {
+
+    setWatchList((prevWatchList) => [...prevWatchList, addedMovie])
+    }//This sets the old movie information to the same as it was before, plus the new movie
+  } 
 
 
   return (
@@ -44,8 +47,7 @@ function App() {
           <Switch>
               <Route exact path='/'>
                   <SearchBar setSearchValue={setSearchValue} searchValue={searchValue}/>
-                  <MovieList movies={movies} />
-                  <AddMovieForm onAddToWatchList={handleAddToWatchList}/>
+                  <MovieList movies={movies} onAddToWatchList={handleAddToWatchList}/>
               </Route>
 
               <Route path='/my-reviews'>
@@ -58,6 +60,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+      <AddMovieForm addedMovie={addedMovie}/>
     </div>
   );
 }
