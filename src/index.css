@@ -32,6 +32,17 @@ body {
   border-bottom: 5px solid rgb(0, 0, 0);
 }
 
+.nav-bar {
+  background-color: rgba(12, 10, 10, 0.552);
+  backdrop-filter: blur(3px);
+  border-radius: 15px;
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
 .search-bar {
   height: 30px;
   border-radius: 10px;
@@ -60,6 +71,7 @@ input::placeholder{
 #img {
   object-fit: cover;
   height: 300px;
+  border-radius: 12px;
 }
 
 .card-container {
@@ -67,65 +79,78 @@ input::placeholder{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 30px;
 }
 
 .movie-style {
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 90px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin: 20px;
   text-align: center;
-  background: linear-gradient(90deg, rgb(30, 30, 30) 0%, rgba(144,144,144,1) 100%);
+  background: linear-gradient(90deg, rgb(30, 30, 30) 0%, rgba(144, 144, 144, 1) 100%);
   height: 310px;
   width: 220px;
-  flex-wrap: wrap;
   min-height: 310px;
   min-width: 220px;
   max-height: 310px;
   max-width: 220px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 5px solid transparent;
+}
+
+.movie-style img {
+  object-fit: cover;
+  height: 230px; /* Adjust the height of the image to fit inside the card */
+}
+
+.movie-style:hover {
+  transform: translateY(-5px);
 }
 
 ul {
-  overflow: hidden;
+  list-style-type: none;
   display: flex;
   justify-content: center;
-  border: 2px solid rgb(31, 30, 30);
   border-radius: 15px;
-  list-style-type: none;
-  width: fit-content;
-  margin: auto;
+  margin: 0;
+}
+
+li {
+  margin: 0;
 }
 
 li:visited {
   background-color: blue;
 }
 
-li {
-  float: left;
-}
-
 li a {
-  text-decoration: none;
+  font-size: 18px;
   display: block;
+  padding: 10px 20px;
+  text-decoration: none;
   color: white;
+  border-radius: 15px;
   text-align: center;
-  padding: 14px 16px;
-  transition-duration: 0.6s;
+  transition: background-color 0.3s;
 }
 
 li a:hover {
   background-color: rgb(31, 29, 29);
   color:rgb(159, 159, 207);
-  background: linear-gradient(90deg, rgb(17, 17, 17) 0%, rgb(97, 97, 97) 100%);
+}
+
+li a.active {
+  background-color: rgb(31, 29, 29);
+  color: rgb(159, 159, 207);
 }
 
 .buttons {
   background-color: rgb(29, 29, 29);
   font-size: 25px;
   border-radius: 10px;
+  margin-top: 5px;
   margin-left: 5px;
   margin-right: 5px;
   cursor: pointer;
@@ -143,7 +168,7 @@ li a:hover {
   padding-right: 5px;
 }
 
-.watch-list {
+.watch-list-text {
   text-align: center;
   color: rgb(248, 248, 248);
   padding-top: 30px;

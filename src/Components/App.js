@@ -9,17 +9,15 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  NavLink
 } from "react-router-dom";
-import AddMovieForm from "./AddMovieForm.js";
-
 
 function App() {
   const [movies, setMovies] = useState([])
   const [searchValue, setSearchValue] = useState('')
-  const [watchList, setWatchList] = useState([])
-  const [addedMovie, setAddedMovie] = useState(null)
+  const [watchList, setWatchList] = useState(new Set())
 
-  useEffect((e) => {
+  useEffect(() => {
     fetch(`http://www.omdbapi.com/?s=${searchValue}&apikey=9ce935f0`)
     .then(res => res.json())
     .then(data => {
@@ -30,23 +28,23 @@ function App() {
   }, [searchValue])
 
   const handleAddToWatchList = (movie) => {
-
-    setWatchList((prevWatchList) => [...prevWatchList, movie])
-    //This sets the old movie information to the same as it was before, plus the new movie
-  } 
+    if(!watchList.has(movie.imdbID)) {
+      setWatchList((prevWatchList) => new Set([...prevWatchList, movie]))
+    // setAddedMovie(null)
+    }
+  }
 
 
   return (
     <div>
       <Header />
-      <AddMovieForm addedMovie={addedMovie} setAddedMovie={setAddedMovie}/>
       <Router>
         <div>
         <NavBar />
           <Switch>
               <Route exact path='/'>
                   <SearchBar setSearchValue={setSearchValue} searchValue={searchValue}/>
-                  <MovieList movies={movies} onAddToWatchList={handleAddToWatchList}/>
+                  <MovieList movies={movies} onAddToWatchList={handleAddToWatchList} />
               </Route>
 
               <Route path='/my-reviews'>
@@ -54,7 +52,7 @@ function App() {
               </Route>
 
               <Route path='/watch-list'>
-                  <WatchList watchList={watchList}/>
+                  <WatchList watchList={watchList} />
               </Route>
           </Switch>
         </div>
