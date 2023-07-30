@@ -4,7 +4,7 @@ function MyReviews() {
 
     return (
     <div className="reviews">
-        <h1>My Reviews</h1>
+        <h1 className="nav-text">My Reviews</h1>
     </div>
     )
 }

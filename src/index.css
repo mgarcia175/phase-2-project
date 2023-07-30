@@ -30,6 +30,7 @@ body {
   border-left: 12px solid rgb(87, 81, 81);
   border-top: 5px solid rgb(87, 81, 81);
   border-bottom: 5px solid rgb(0, 0, 0);
+  margin-bottom: 20px;
 }
 
 .nav-bar {
@@ -168,14 +169,31 @@ li a.active {
   padding-right: 5px;
 }
 
-.watch-list-text {
+.nav-text {
   text-align: center;
   color: rgb(248, 248, 248);
-  padding-top: 30px;
+  padding-top: 15px;
 }
 
 .reviews {
   text-align: center;
   color: rgb(248, 248, 248);
   padding-top: 30px;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: blue;
+  color: ghostwhite;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+.notification p {
+  margin: 0;
 }
