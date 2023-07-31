@@ -186,12 +186,11 @@ li a.active {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: blue;
-  color: ghostwhite;
+  background-color: rgb(95, 179, 35);
+  color: rgb(0, 0, 0);
   padding: 10px 20px;
   border-radius: 5px;
   z-index: 9999;
-  transition: opacity 0.3s ease;
 }
 
 .notification p {

@@ -1,19 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 function MovieList({ movies, onAddToWatchList }) {
     const [showNotification, setShowNotification] = useState(false)
-    const [notificattionMessage, setNotificationMessage] = useState('')
+    const [notificationMessage, setNotificationMessage] = useState('')
+
+    const notificationRef = useRef(null)
+
+    useEffect(() => {
+        if(showNotification) {
+            //adding the block to display will show the element
+            notificationRef.current.style.display = 'block'
+
+            const timeoutId = setTimeout(() => {
+                setShowNotification(false)
+            }, 2000)
+
+            //clean up function to hide the notification
+            return () => clearTimeout(timeoutId)
+        }
+    }, [showNotification])
 
     function showNotificationMessage(message) {
         setShowNotification(true)
         setNotificationMessage(message)
-
-        setTimeout(() => {
-            setNotificationMessage(false)
-            setNotificationMessage('')
-        }, 2000)
     }
-
     
     function handleAddToWatchList(movie) {
         onAddToWatchList(movie)
@@ -25,8 +35,10 @@ function MovieList({ movies, onAddToWatchList }) {
     return (
         <div>
             {showNotification && (
-                <div className="notification">
-                    <p>{notificattionMessage}</p>
+                <div className={`notification ${showNotification ? 'show' : ''}`}
+                    ref={notificationRef}
+                >
+                    <p>{notificationMessage}</p>
                 </div>
             )}
                 <div className="card-container">
