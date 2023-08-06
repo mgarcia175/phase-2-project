@@ -1,6 +1,6 @@
 import React from "react";
 
-function WatchList({ watchList }) {
+function WatchList({ watchList, handleWatchListDelete }) {
     const watchListArray = Array.from(watchList)
 
     return (
@@ -10,7 +10,7 @@ function WatchList({ watchList }) {
                 {watchListArray.map((movie) => (
                     <div className="movie-style" key={movie.imdbID}>
                         <img src={movie.Poster} alt={movie.Title} id="img"></img>
-                        <button className="buttons">&#9989;</button>
+                        <button className="buttons" onClick={() => handleWatchListDelete(movie.imdbID)}>&#9989;</button>
                     </div>
                 ))}
         </div>
