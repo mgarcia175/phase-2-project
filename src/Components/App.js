@@ -3,8 +3,9 @@ import MovieList from "./MovieList.js"
 import NavBar from  "./NavBar.js"
 import SearchBar from "./SearchBar.js";
 import Header from "./Header.js";
-import MyReviews from "./MyReviews.js";
+import ReviewForm from "./ReviewForm.js";
 import WatchList from "./WatchList.js";
+import MyReviews from "./MyReviews.js";
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,7 +16,16 @@ function App() {
   const [movies, setMovies] = useState([])
   const [searchValue, setSearchValue] = useState('')
   const [watchList, setWatchList] = useState(new Set())
+  const [reviews, setReviews] = useState([])
   
+  useEffect(() => {
+    fetch('http://localhost:3000/my-reviews')
+    .then((response) => response.json())
+    .then((data) => {
+      setReviews(data)
+    })
+  }, [])
+
   useEffect(() => {
     fetch(`http://www.omdbapi.com/?s=${searchValue}&apikey=9ce935f0`)
     .then(res => res.json())
@@ -49,16 +59,26 @@ function App() {
         <NavBar />
           <Switch>
               <Route exact path='/'>
-                  <SearchBar setSearchValue={setSearchValue} searchValue={searchValue}/>
-                  <MovieList movies={movies} onAddToWatchList={handleAddToWatchList} />
+                  <SearchBar 
+                  setSearchValue={setSearchValue} 
+                  searchValue={searchValue}/>
+                  <MovieList 
+                  movies={movies} 
+                  onAddToWatchList={handleAddToWatchList} />
               </Route>
 
               <Route path='/my-reviews'>
-                  <MyReviews />
+                  <MyReviews reviews={reviews}/>
               </Route>
 
               <Route path='/watch-list'>
-                  <WatchList watchList={watchList} handleWatchListDelete={handleWatchListDelete}/>
+                  <WatchList 
+                  watchList={watchList} 
+                  handleWatchListDelete={handleWatchListDelete} 
+                  ReviewForm={ReviewForm}
+                  reviews={reviews}
+                  setReviews={setReviews}
+                  />
               </Route>
           </Switch>
         </div>

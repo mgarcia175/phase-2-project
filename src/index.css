@@ -164,9 +164,9 @@ li a.active {
 }
 
 #pencil {
-  color: rgb(232, 181, 12);
-  padding-left: 5px;
-  padding-right: 5px;
+  color: rgb(255, 196, 1);
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .nav-text {
@@ -195,4 +195,8 @@ li a.active {
 
 .notification p {
   margin: 0;
+}
+
+#review-text {
+  color: rgb(139, 130, 130);
 }
