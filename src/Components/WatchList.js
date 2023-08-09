@@ -29,7 +29,10 @@ function WatchList({ watchList, handleWatchListDelete, ReviewForm, setReviews })
         })
         .then(function(data) {
             console.log('Success!', data)
-            setReviews(data)
+            setReviews(prevReviews => ({
+                ...prevReviews,
+                [data.reviewId]: data
+            }))
         })
         .catch(function(error) {
             console.error('Oh no! Something went wrong!', error)
