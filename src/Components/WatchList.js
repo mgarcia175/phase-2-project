@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function WatchList({ watchList, handleWatchListDelete, ReviewForm }) {
+function WatchList({ watchList, handleWatchListDelete, ReviewForm, setReviews }) {
     //initializes the form as false, to hide it
     const [showReviewForm, setShowReviewForm] = useState(false)
     //Setting to null then will be updated to shwow the movie to be reviewed
@@ -14,10 +14,10 @@ function WatchList({ watchList, handleWatchListDelete, ReviewForm }) {
             reviewText: reviewText
         }
 
-        return fetch('http://localhost:3000/my-reviews', {
+        return fetch('http://localhost:3001/reviews', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application.json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(review),
         })
@@ -29,6 +29,7 @@ function WatchList({ watchList, handleWatchListDelete, ReviewForm }) {
         })
         .then(function(data) {
             console.log('Success!', data)
+            setReviews(data)
         })
         .catch(function(error) {
             console.error('Oh no! Something went wrong!', error)

@@ -7,10 +7,10 @@ function MyReviews({ reviews }) {
         <div>
             <h1 className="nav-text">My Reviews</h1>
             <div className="review-list">
-                {reviews.map((review, index) => (
-                    <div index={index} className="review-item">
-                        <h3>{review.movie.Title}</h3>
-                        <p>{review.reviewText}</p>
+                {Object.keys(reviews).map((reviewId) => (
+                    <div key={reviewId} className="review-item">
+                        <h2>{reviews[reviewId].movieId}</h2>
+                        <p>{reviews[reviewId].reviewText}</p>
                     </div>
                 ))}
             </div>

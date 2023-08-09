@@ -23,6 +23,7 @@ function App() {
     .then((response) => response.json())
     .then((data) => {
       setReviews(data)
+      console.log(data)
     })
   }, [])
 
