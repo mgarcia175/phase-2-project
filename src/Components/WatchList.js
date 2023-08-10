@@ -10,6 +10,7 @@ function WatchList({ watchList, handleWatchListDelete, ReviewForm, setReviews })
 
     function handleReviewSubmission(movie, reviewText) {
         const review = {
+            movie: movie.Title,
             movieId: movie.imdbID,
             reviewText: reviewText
         }

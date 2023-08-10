@@ -1,7 +1,6 @@
 import React from "react";
 
 function MyReviews({ reviews }) {
-    console.log(reviews)
 
     return (
         <div>
@@ -9,8 +8,9 @@ function MyReviews({ reviews }) {
             <div className="review-list">
                 {Object.keys(reviews).map((reviewId) => (
                     <div key={reviewId} className="review-item">
-                        <h2>{reviews[reviewId].movieId}</h2>
-                        <p>{reviews[reviewId].reviewText}</p>
+                        <h1 id="review-title">{reviews[reviewId].movie}</h1>
+                        <h4 id="review-imdbID">Movie imdbID: {reviews[reviewId].movieId}</h4>
+                        <p id='review-paragraph'>{reviews[reviewId].reviewText}</p>
                     </div>
                 ))}
             </div>
@@ -18,4 +18,4 @@ function MyReviews({ reviews }) {
     )
 }
 
-export default MyReviews
+export default MyReviews;
