@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MyReviews from "./MyReviews";
 
 function WatchList({ watchList, handleWatchListDelete, ReviewForm, setReviews }) {
     //initializes the form as false, to hide it
@@ -9,18 +10,18 @@ function WatchList({ watchList, handleWatchListDelete, ReviewForm, setReviews })
     const watchListArray = Array.from(watchList)
 
     function handleReviewSubmission(movie, reviewText) {
-        const review = {
+        const newReview = {
             movie: movie.Title,
             movieId: movie.imdbID,
             reviewText: reviewText
         }
 
-        return fetch('http://localhost:3001/reviews', {
+        fetch('http://localhost:3001/reviews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(review),
+            body: JSON.stringify(newReview),
         })
         .then(function(response) {
             if (!response.ok) {
@@ -30,10 +31,7 @@ function WatchList({ watchList, handleWatchListDelete, ReviewForm, setReviews })
         })
         .then(function(data) {
             console.log('Success!', data)
-            setReviews(prevReviews => ({
-                ...prevReviews,
-                [data.reviewId]: data
-            }))
+            setReviews(prevReviews => ([...prevReviews, newReview]))
         })
         .catch(function(error) {
             console.error('Oh no! Something went wrong!', error)

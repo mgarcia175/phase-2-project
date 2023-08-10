@@ -16,7 +16,7 @@ function App() {
   const [movies, setMovies] = useState([])
   const [searchValue, setSearchValue] = useState('')
   const [watchList, setWatchList] = useState(new Set())
-  const [reviews, setReviews] = useState({})
+  const [reviews, setReviews] = useState([])
   
   useEffect(() => {
     fetch('http://localhost:3000/my-reviews')
