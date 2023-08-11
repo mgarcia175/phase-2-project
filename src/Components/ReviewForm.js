@@ -18,15 +18,15 @@ function ReviewForm({ movie, onClose, handleReviewSubmission }) {
 
         <form onSubmit={handleSubmit}>
             <textarea
-            rows='4'
-            cols='50'
+            id="review-box"
+            rows='10'
+            cols='70'
             value={reviewText}
             onChange={(event) => setReviewText(event.target.value)}
-            placeholder="Write your review.."
+            placeholder=" Write your review.."
             ></textarea>
-            
-            <button type='submit'>Submit</button>
-            <button onClick={onClose}>Cancel</button>
+            <button id="submit-button" type='submit'>Submit</button>
+            <button id="cancel-button" onClick={onClose}>Cancel</button>
         </form>
     </div>
     )

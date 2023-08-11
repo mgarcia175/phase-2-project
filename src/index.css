@@ -198,8 +198,19 @@ li a.active {
   margin: 0;
 }
 
+#review-text {
+  color: rgb(165, 165, 165);
+}
+
+.review-list {
+  padding-bottom: 20px;
+}
+
 .review-item {
   border-style: inset; 
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px;
 }
 
 #review-title {
@@ -216,3 +227,38 @@ li a.active {
   color: blueviolet;
   text-align: center;
 }
+
+#review-box {
+  border-radius: 10px;
+  background-color: rgba(190, 197, 203, 0.659);
+  color: black;
+}
+
+#review-box::placeholder {
+  color: rgb(44, 44, 46);
+}
+
+#submit-button {
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(31, 132, 33, 0.756);
+}
+
+#cancel-button {
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(122, 33, 33, 0.768);
+}
+
+#submit-button:hover {
+  background-color: rgb(10, 70, 28);
+  transition-duration: 0.4s;
+}
+
+#cancel-button:hover {
+  background-color: rgb(52, 12, 12);
+  transition-duration: 0.4s;
+}
+
