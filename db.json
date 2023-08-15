@@ -253,6 +253,18 @@
       "movieId": "tt0086190",
       "reviewText": "sa fasef asf saf ase f",
       "id": 45
+    },
+    {
+      "movie": "Star Wars: Episode V - The Empire Strikes Back",
+      "movieId": "tt0080684",
+      "reviewText": "sefsef sefs efs efs",
+      "id": 46
+    },
+    {
+      "movie": "Shrek 2",
+      "movieId": "tt0298148",
+      "reviewText": "I loved this movie! Very funny! Loved Donkey's jokes and the Gingerbread Man was SO cute! DEF watching the rest of the sequels! highly recommend! 10/10!",
+      "id": 47
     }
   ]
 }
