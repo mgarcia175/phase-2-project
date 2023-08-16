@@ -265,6 +265,12 @@
       "movieId": "tt0298148",
       "reviewText": "I loved this movie! Very funny! Loved Donkey's jokes and the Gingerbread Man was SO cute! DEF watching the rest of the sequels! highly recommend! 10/10!",
       "id": 47
+    },
+    {
+      "movie": "Shrek 2",
+      "movieId": "tt0298148",
+      "reviewText": "I loved this movie! Very funny! Loved Donkey's jokes and the Gingerbread Man was SO cute! DEF watching the rest of the sequels! Highly recommend! 10/10!",
+      "id": 48
     }
   ]
 }

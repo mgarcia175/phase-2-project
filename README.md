@@ -3,11 +3,11 @@ The interactive movie application, designed to give you more power over you movi
 
 ## Description
 
-Movie-verse is a fun application, which allows users to really dive into the universe of movies by giving them the control to explore, learn and plan their jounrey to watch movies which they are interested in!
+***Movie-verse*** is a fun application, which allows users to really dive into the universe of movies by giving them the control to explore, learn and plan their jounrey to watch movies which they are interested in!
 
-From looking up specific movies, to being able to save them with their own watch list, users are also able to write their own reviews on the movies they have watched, Movie-Verse is designed to give more power and guidance to movie enjoyers, from beginners to experienced.
+From looking up specific movies, to being able to save them with their own watch list, users are also able to write their own reviews on the movies they have watched, ***Movie-Verse*** is designed to give more power and guidance to movie enjoyers, from beginners to experienced.
 
-Let's run throught the nifty features available, when using Movie-verse, and how the application works!
+Let's run throught the nifty features available, when using ***Movie-verse***, and how the application works!
 
 The application starts with 3 pages that are able to be visited:
 
@@ -19,7 +19,7 @@ The first route, being the Search page and the starting page, brings you to a se
 
 Once the desired movie has been generated, you will be able to see the movie generated within it's very own card that contains 2 buttons, which fire off some more cool functionalities!
 
-One of those functionalities, is the "Thumbs up!" feature. This allows you to give a movie your approval by being able to add the fact that you have watched it, and liked it. The other is the "Add to your Watch List" button, which adds the selected movie to your Watch List, which brings us to the next page.
+One of those functionalities, is the "Clap!" feature. This allows you to give a movie your approval by being able to add the fact that you have watched it, and liked it. The other is the "Add to your Watch List" button, which adds the selected movie to your Watch List, which brings us to the next page.
 
 The Watch List page is where you will see all the movies you are planning on watching in the future! You may add as many as you like.
 
@@ -33,12 +33,14 @@ Happy movie hunting!
 
 Project Introduction - YouTube
 
+:film_strip: 
+
 ## Usage
 
-Movie-Verse assists users by:
+***Movie-Verse*** assists users by:
 
 + Allowing users to search **any movie** they may be interested in, or have already watched
-+ Enabling users to give the movies they enjoyed, a **thumbs up**
++ Enabling users to give the movies they enjoyed, a **Clap**
 + Allowing users to create and submit reviews any movies they have watched
 + Alling users to add movies they are interested in, to their Watch List for future planning
 
@@ -72,14 +74,13 @@ Below the generated movies, are two buttons. ***The Clap button*** and ***The Ad
 
 ***Clap Button***
 
-
+This button, once clicked, the movie will be given a "Clap". Your way of giving the movie a little kuddos!
 
 ***Add to Watch List Button***
 
 This button, once clicked, will add the selected movie, to your Watch List. A notification will appear on the bottom of the screen, informing you that the movie has been added, for future plans!
 
 ![Screenshot of notification](https://i.imgur.com/J9B0fK6.png)
-
 
 This brings us to the ***Watch List*** page!
 
@@ -104,3 +105,53 @@ Once the review button is pressed, a box will appear. Here you will write and su
 Let's write a review and submit it!
 
 ![Screenshot of review](https://i.imgur.com/rfsDZBd.png)
+
+## My Reviews
+
+Once the reviw has been submitted, head to the My Reviews page, and there it is!
+
+![Screenshot of review](https://i.imgur.com/CSO1eQ7.png)
+
+# Support
+
+For any and all questions, concerns, or comments, please do not hesitate to reach out to me via email!
+
+:envelope:: **martingarcia804@yahoo.com**
+
+## Roadmap
+
+In the future, I will most definitely be adding some features. Here is the latest list of future releases.
+
+- Application will also bring up short clips of the movie
+- Application will have high-end movie cards
+- Application will also have a rating system
+
+More coming soon!...
+
+## Authors and acknowledgment
+
+Many thanks go to the many communities online and the technical support agents from Flatiron, who were a tremendous help. And I am sure I speak for many programmers when I also say thank you to Google!
+
+## License
+
+***MIT License***
+
+Copyright (c) [2023] [Martin Garcia]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
