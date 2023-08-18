@@ -30,8 +30,6 @@ function MovieList({ movies, onAddToWatchList }) {
         showNotificationMessage(`${movie.Title} has been added to your Watch List!`)
     }
 
-    function handleClap() {}
-
     return (
         <div>
             {showNotification && (
@@ -46,7 +44,6 @@ function MovieList({ movies, onAddToWatchList }) {
                     <div className="movie-style" key={movie.imdbID}>
                         <img src={movie.Poster} alt={movie.Title} id="img"></img>
 
-                        <button className='buttons' onClick={() => handleClap(movie)}>&#x1F44F;</button>
                         <button className='buttons' onClick={() => handleAddToWatchList(movie)}>&#x1F440;</button>
                     </div>
                     ))}
